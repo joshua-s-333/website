@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>New</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Ms+Madi&family=Water+Brush&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        nav {
+            top: 0;
+            right: 0;
+            left: 0;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            box-shadow: 1px 1px 5px black;
+            padding: 0px 30px;
+        }
+
+        nav .nav-link ul {
+            list-style: none;
+        }
+
+        nav .nav-link li {
+            float: left;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        nav .nav-link li:hover {
+            background-color: rgba(151, 215, 212, 0.7);
+        }
+
+        .tog {
+            display: none;
+            font-size: 32px;
+        }
+
+        .nav-link ul li i {
+            padding: 5px;
+        }
+
+        @media screen and (max-width:760px) {
+            .tog {
+                display: block;
+            }
+
+            .nav-link {
+                position: fixed;
+                display: none;
+                background-color: white;
+                top: 70px;
+                left: 10px;
+                width: 97%;
+                border-radius: 10px;
+                box-shadow: 0px 1px 3px black;
+            }
+
+            .nav-link ul li {
+                float: none;
+                display: block;
+                padding: 15px;
+                border-radius: 10px;
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .qu {
+            font-family: 'Water Brush', cursive;
+            color: white;
+        }
+
+        .card {
+            width: 280px;
+            height: 350px;
+            margin: 20px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.687);
+            border: 1px solid rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .card h1 {
+            text-align: center;
+            margin: 10px 0 0 0;
+            font-family: 'Dosis', sans-serif;
+        }
+
+        .card p {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card-sec {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 100px;
+        }
+
+        .card-box {
+            flex-direction: column;
+            height: auto;
+            background-color: azure;
+        }
+
+        .cardhead {
+            margin: 100px 0 50px 0;
+            font-size: 50px;
+            font-family: 'Dosis', sans-serif;
+        }
+
+        .card:hover {
+            filter: grayscale(0.7);
+            opacity: 0.7;
+        }
+
+        .contact {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 7px;
+            color: white;
+            flex-direction: column;
+            width: auto;
+            height: auto;
+            padding: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+        }
+
+        form>input {
+            width: 400px;
+            height: 40px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-head {
+            font-size: 50px;
+            margin-bottom: 20px;
+            font-family: 'Dosis', sans-serif;
+        }
+
+        form>button {
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 20px;
+            color: white;
+            background: transparent;
+            width: 100px;
+            margin: 10px 0 0 10px;
+            transition: 0.6s;
+        }
+
+        form>button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #feedback {
+            width: 400px;
+            margin: 10px;
+            padding: 10px;
+            overflow: scroll;
+            height: 100px;
+            font-size: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1 style="font-weight: lighter;"><i class="bi bi-bar-chart-steps" style="padding: 3px;"></i>Brand</h1>
+        <div class="nav-link">
+            <ul>
+                <li onclick="window.location = '#'"><i class="bi bi-house-fill"></i>Home</li>
+                <li onclick="window.location = '#'"><i class="bi bi-people-fill"></i>About Us</li>
+                <li onclick="window.location = '#contact'"><i class="bi bi-person-lines-fill"></i>Contact Us</li>
+                <li onclick="window.location = '#class'"><i class="bi bi-info-circle-fill"></i>Help</li>
+            </ul>
+        </div>
+        <div class="tog"><i class="bi bi-list"></i></div>
+    </nav>
+
+    <div class="container"
+        style="background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/129105/pexels-photo-129105.jpeg?cs=srgb&dl=pexels-markus-spiske-129105.jpg&fm=jpg') no-repeat center / cover;">
+        <h1 class="qu">
+            One day everything will change!
+        </h1>
+    </div>
+
+    <div class="container card-box" id="class">
+        <h1 class="cardhead">Our Classes</h1>
+        <div class="card-sec">
+            <div class="card"
+                onclick="window.open('https://www.christianity.com/wiki/christian-terms/what-is-love.html', '_blank');">
+                <img src="https://images.pexels.com/photos/426894/pexels-photo-426894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="">
+                <h1>Love</h1>
+                <p>Love is and always has been a complex concept. Is it an emotion, an ability, a gift, a force, or all
+                    of the above?</p>
+            </div>
+            <div class="card" onclick="window.open('https://www.biblestudytools.com/dictionary/hope/', '_blank');"><img
+                    src="https://images.pexels.com/photos/620337/pexels-photo-620337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="">
+                <h1>Hope</h1>
+                <p>hope is the confident expectation of what God has promised and its strength is in His faithfulness
+                </p>
+            </div>
+            <div class="card"
+                onclick="window.open('https://journals.sagepub.com/doi/abs/10.1177/026009438703800201?journalCode=tbtd', '_blank');">
+                <img src="https://images.pexels.com/photos/45987/pexels-photo-45987.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="">
+                <h1>Peace</h1>
+                <p>It covers the sum total of God's blessings to a person who belongs to the covenant community.</p>
+            </div>
+            <div class="card"
+                onclick="window.open('https://www.desiringgod.org/articles/self-control-and-the-power-of-christ', '_blank');">
+                <img src="https://images.pexels.com/photos/164196/pexels-photo-164196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="">
+                <h1>Self Control</h1>
+                <p>Self-control helps us to resist temptation and avoid conforming to the things of this world.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"  id="contact" style="background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1502657877623-f66bf489d236?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80') no-repeat center / cover;
+        overflow: scroll;">
+        <div class="container contact">
+            <h1 class="contact-head">Contact Us</h1>
+            <form action="#">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="phno" placeholder="Phone no">
+                <input type="text" name="Email" placeholder="Email">
+                <textarea cols="30" rows="10" id="feedback" placeholder="Feedback"></textarea>
+                <button type="submit">Done</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        $('.tog').click(function () {
+            $('.nav-link').slideToggle();
+        });
+        window.addEventListener('resize', function (event) {
+            if (window.innerWidth > 760) {
+                $('.nav-link').show();
+                $('#feedback').width('400px');
+                $('input').width('400px');
+            }
+            else {
+                $('.nav-link').hide();
+                $('#feedback').width('auto');
+                $('input').width('auto');
+            }
+        });
+    </script>
+</body>
+
+</html>
